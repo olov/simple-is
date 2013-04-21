@@ -26,8 +26,8 @@ test("various", function(t, yes, no) {
     yes(is.string("asdf"));
     no(is.string(new String("asdf")));
 
-    yes(is.function(fn));
-    no(is.function({}));
+    yes(is.fn(fn));
+    no(is.fn({}));
 
     yes(is.object({}));
     no(is.object(null));
@@ -53,9 +53,9 @@ test("various", function(t, yes, no) {
     no(is.noneof("x", [0, 1, "x"]));
     yes(is.noneof(1, ["1"]));
 
-    yes(is.in({a: 1}, "a"));
-    no(is.in({a: 1}, "b"));
-    no(is.in({a: 1}, "toString"));
+    yes(is.own({a: 1}, "a"));
+    no(is.own({a: 1}, "b"));
+    no(is.own({a: 1}, "toString"));
 
     t.end();
 });

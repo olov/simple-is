@@ -7,7 +7,7 @@ more readable. Works in node and browsers.
 ## Usage
 `var is = require("simple-is");`
 
-Use `is.number(x)` instead of `typeof x === "number"` (also `is.boolean`, `is.string`, `is.function`).
+Use `is.number(x)` instead of `typeof x === "number"` (also `is.boolean`, `is.string`, `is.fn`).
 
 Use `is.nan(x)` instead of `typeof x === "number" && isNaN(x)`, `x !== x` or ES6 `Number.isNaN(x)`.
 
@@ -23,7 +23,7 @@ Use `is.someof(x, ["first", 2, obj])` instead of (usually) `x === "first" || x =
 
 Use `is.noneof(x, ["first", 2, obj])` instead of (usually) `x !== "first" && x !== 2 && x !== obj` or (alternatively)  `["first", 2, obj].indexOf(x) === -1`.
 
-Use `is.in(x, "name")` instead of `Object.prototype.hasOwnProperty.call(x, "name")`.
+Use `is.own(x, "name")` instead of `Object.prototype.hasOwnProperty.call(x, "name")`.
 
 That's it.
 

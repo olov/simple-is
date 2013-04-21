@@ -22,7 +22,7 @@ var is = (function() {
         string: function(v) {
             return typeof v === "string";
         },
-        function: function(v) {
+        fn: function(v) {
             return typeof v === "function";
         },
         object: function(v) {
@@ -45,7 +45,7 @@ var is = (function() {
         noneof: function(v, values) {
             return values.indexOf(v) === -1;
         },
-        in: function(obj, prop) {
+        own: function(obj, prop) {
             return hasOwnProperty.call(obj, prop);
         },
     };
